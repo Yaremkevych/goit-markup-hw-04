@@ -139,7 +139,9 @@ a .current {
 }
 /*-----------SECTION-1-----------*/
 .solutions {
+    width: 100%;
     max-width: 1440px;
+    margin: 0 auto;
     background-color: var(--navyblue);
     background-image: linear-gradient(
             rgba(46, 47, 66, 0.7),
