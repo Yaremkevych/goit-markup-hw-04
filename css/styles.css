@@ -5,7 +5,12 @@
     --white: #ffffff;
     --cloud: #f4f4fd;
     --ocean: #404bbf;
-    --border-clr: #e7e9fc;
+    --green: #31d0aa;
+    --cornflower: #e7e9fc;
+    --light-slate: #8e8f99;
+    --grey: #2e2f42;
+    --dairy: #fcfcfc;
+    --navy-blue-modal: #2e2f42;
 }
 
 body {
@@ -61,6 +66,16 @@ a {
     margin: 0 auto;
     padding: 0 15px;
 }
+.current::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    left: 0;
+    bottom: 0;
+    border-radius: 2px;
+    background: var(--ocean, #404bbf);
+}
 /*-----------HEADER-----------*/
 .logo {
     color: var(--iris);
@@ -76,12 +91,16 @@ a {
     color: var(--navyblue);
 }
 
-.navigation-list-item {
+.navigation-list-link {
     color: var(--navyblue);
     font-weight: 500;
     line-height: 1.5;
     letter-spacing: 0.02em;
     padding: 24px 0;
+}
+
+.navigation-list-item {
+    position: relative;
 }
 .navigation-list {
     display: flex;
@@ -96,7 +115,7 @@ a {
     display: flex;
 }
 .header {
-    border-bottom: 1px solid var(--border-clr);
+    border-bottom: 1px solid var(--cornflower);
 }
 .address-list {
     display: flex;
@@ -105,21 +124,28 @@ a {
 .address {
     font-style: normal;
 }
-.address-list-item {
+.address-list-link {
     color: var(--slate);
     line-height: 1.5;
     letter-spacing: 0.02em;
     padding: 24px 0;
 }
-.address-list-item:hover,
-.navigation-list-item:hover,
-.address-list-item:focus,
-.navigation-list-item:focus {
+.address-list-link:hover,
+.navigation-list-link:hover,
+.address-list-link:focus,
+.navigation-list-link:focus {
     color: var(--ocean);
 }
 /*-----------SECTION-1-----------*/
 .solutions {
     background-color: var(--navyblue);
+    background-image: linear-gradient(
+            rgba(46, 47, 66, 0.7),
+            rgba(46, 47, 66, 0.7)
+        ),
+        url(../images/people-office.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
     padding: 188px 0;
 }
 .solutions-title {
@@ -179,6 +205,16 @@ a {
     line-height: 1.5;
     letter-spacing: 0.02em;
 }
+.advantages-icon {
+    display: flex;
+    width: 100%;
+    height: 112px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    background: var(--cloud);
+    margin-bottom: 8px;
+}
 /*-----------SECTION-3-----------*/
 .work-title {
     color: var(--navyblue);
@@ -213,7 +249,11 @@ a {
     background-color: var(--white);
     width: calc((100% - 72px) / 4);
     border-radius: 0px 0px 4px 4px;
+    box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08),
+        0px 1px 1px 0px rgba(46, 47, 66, 0.16),
+        0px 1px 6px 0px rgba(46, 47, 66, 0.08);
 }
+
 .team-title {
     color: var(--navyblue);
     text-align: center;
@@ -242,6 +282,40 @@ a {
     text-align: center;
     line-height: 1.5;
     letter-spacing: 0.02em;
+}
+/*-----------SECTION-5-----------*/
+.customers-title {
+    color: var(--navyblue);
+    text-align: center;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 1.11;
+    letter-spacing: 0.02em;
+    text-transform: capitalize;
+    padding-top: 120px;
+    margin-bottom: 72px;
+}
+.customers-list {
+    display: flex;
+    gap: 24px;
+}
+.customers-list-item {
+    width: calc((100% - 120px) / 6);
+    margin-bottom: 120px;
+}
+.customers-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    border: 1px solid var(--light-slate);
+    height: 88px;
+    fill: var(--light-slate);
+}
+.customers-icon:hover,
+.customers-icon-item:focus {
+    border-color: var(--ocean);
+    fill: var(--ocean);
 }
 /*-----------FOOTER-----------*/
 .footer {
@@ -284,7 +358,7 @@ a {
     line-height: 1.5;
     letter-spacing: 0.04em;
     padding: 12px 24px;
-    border: 1px solid var(--border-clr);
+    border: 1px solid var(--cornflower);
     border-radius: 4px;
 }
 .portfolio-nav-btn:hover,
@@ -304,7 +378,7 @@ a {
 }
 .project-info {
     padding: 32px 16px;
-    border: 1px solid var(--border-clr);
+    border: 1px solid var(--cornflower);
     border-top: none;
 }
 /*-----------PROJECTS-----------*/
@@ -320,4 +394,7 @@ a {
     color: var(--slate);
     line-height: 1.5;
     letter-spacing: 0.02em;
+}
+.icon .antenna {
+    fill: #404bbf;
 }
