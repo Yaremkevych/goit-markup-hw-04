@@ -38,9 +38,12 @@ ol {
 }
 img {
     display: block;
+    width: 100%;
+    height: auto;
 }
 a {
     display: inline-block;
+    cursor: pointer;
 }
 .visually-hidden {
     position: absolute;
@@ -141,7 +144,6 @@ a {
 }
 /*-----------SECTION-1-----------*/
 .solutions {
-    width: 100%;
     max-width: 1440px;
     margin: 0 auto;
     background-color: var(--navyblue);
@@ -319,6 +321,9 @@ a {
     background-color: var(--ocean);
 }
 /*-----------SECTION-5-----------*/
+.customers {
+    padding: 120px 0;
+}
 .customers-title {
     color: var(--navyblue);
     text-align: center;
@@ -327,7 +332,6 @@ a {
     line-height: 1.11;
     letter-spacing: 0.02em;
     text-transform: capitalize;
-    padding-top: 120px;
     margin-bottom: 72px;
 }
 .customers-list {
@@ -336,22 +340,25 @@ a {
 }
 .customers-list-item {
     width: calc((100% - 120px) / 6);
-    margin-bottom: 120px;
+    height: 88px;
 }
-.customers-icon {
+.customers-icon-link {
+    width: 100%;
+    height: 100%;
+    border: 1px solid var(--light-slate);
+    border-radius: 4px;
     display: flex;
     align-items: center;
     justify-content: center;
-    border-radius: 4px;
-    border: 1px solid var(--light-slate);
-    height: 88px;
-    fill: var(--light-slate);
+    color: var(--light-slate);
     transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.customers-icon:hover,
-.customers-icon-item:focus {
+.customers-icon-link:is(:hover, :focus) {
     border-color: var(--ocean);
-    fill: var(--ocean);
+    color: var(--ocean);
+}
+.customers-icon {
+    fill: currentColor;
 }
 /*-----------FOOTER-----------*/
 .footer {
