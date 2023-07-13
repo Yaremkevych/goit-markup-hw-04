@@ -472,7 +472,7 @@ a {
         0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
     transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.projects-list-link:hover .overflow-text {
+.projects-list-link:is(:hover, :focus) .overflow-text {
     transform: translateY(0%);
 }
 .project-img-box {
