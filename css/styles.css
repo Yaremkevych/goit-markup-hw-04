@@ -431,10 +431,6 @@ a {
     justify-content: center;
     gap: 24px;
     margin-bottom: 72px;
-    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-        background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-        border-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-        box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .portfolio-nav-btn {
     color: var(--iris);
@@ -449,6 +445,10 @@ a {
     padding: 12px 24px;
     border: 1px solid var(--cornflower);
     border-radius: 4px;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+        background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+        border-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+        box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .portfolio-nav-btn:is(:hover, :focus) {
     color: var(--white);
@@ -462,10 +462,10 @@ a {
     flex-wrap: wrap;
     column-gap: 24px;
     row-gap: 48px;
-    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .projects-list-item {
     width: calc((100% - 48px) / 3);
+    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .projects-list-link {
     display: block;
@@ -520,8 +520,8 @@ a {
     width: 100%;
     height: 100%;
     background-color: rgba(46, 47, 66, 0.4);
-    transition: opacity 500ms cubic-bezier(0.4, 0, 0.2, 1),
-        visibility 500ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
+        visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .is-hidden {
     opacity: 0;
